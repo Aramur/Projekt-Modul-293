@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/* Navigation */
+nav {
+    background-color: #868686;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+}
+nav a {
+    width: 100%;
+    padding: 10px 0;
+    color: #1A1A1A;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #1A1A1A;
+}
+nav a:hover, nav a:active {
+    background-color: #e2e2e2;
+}
+i {
+    -webkit-text-stroke: 0.4px;
+}
+/* Article */
+article {
+    padding: 20px;
+}
+/* Über mich */
+.uebermich {
+    display: grid;
+    grid-template: 1% 1fr / 1fr 15px 1fr;
+}
+.uebermich .columnleft {
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+}
+.uebermich .columnright {
+    grid-row: 2 / 2;
+    grid-column: 3 / 3;
+}
+.portrait {
+    width: 100%; 
+}
+/* Fähigkeiten */
+.faehigkeiten {
+    display: grid;
+    grid-template: 1% 1% 1fr/ 1fr;
+}
+.faehigkeiten .intro {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.faehigkeiten .list {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+/* Portfolio */
+.portfolio {
+    display: grid;
+    grid-template: 1% 1% 1% 1fr / 1fr 10px 1fr 10px 1fr;
+}
+.portfolio .intro {
+    grid-row: 2 / 3;
+    grid-column: 1 / 6;
+}
+.projekte {
+    grid-row: 3 / 4;
+    grid-column: 1 / 6;
+}
+.portfolio .columnleft {
+    grid-row: 4 / 5;
+    grid-column: 1 / 1;
+}
+.portfolio .columnmiddle {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+}
+.portfolio .columnright {
+    grid-row: 4 / 5;
+    grid-column: 5 / 6;
+}
+/* Kontakt */
+.kontakt {
+    display: grid;
+    grid-template: 1% 1% 1fr 1% 1% / 1fr;
+}
+.kontaktformular {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.contactform {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+.kontaktdaten {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+input, textarea {
+    width: 70%;
+    display: block;
+    margin-bottom: 8px;
+}
+h1 {
+    color: #2F39A4;
+    margin-bottom: 0;
+    font-size: 1.9em;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+h2 {
+    color: #1B248E;
+    font-size: 1.5em;
+}
+@media screen and (max-width: 420px)  {
+    .portfolio {
+        display: grid;
+        grid-template: 1% 1% 1% 1fr 1fr 1fr / 1fr 10px 1fr 10px 1fr;
+    }
+    .portfolio .columnleft {
+        grid-row: 4 / 5;
+        grid-column: 1 / 6;
+    }
+    .portfolio .columnmiddle {
+        grid-row: 5 / 6;
+        grid-column: 1 / 6;
+    }
+    .portfolio .columnright {
+        grid-row: 6 / 7;
+        grid-column: 1 / 6;
+    }
+}
+@media screen and (max-width: 490px)  {
+    .nav-text {
+        display: none;
+    }
+}
+
