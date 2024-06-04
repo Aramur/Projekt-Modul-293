@@ -1,12 +1,33 @@
+/* Allgemein */
 body {
     margin: 0;
     padding: 0;
+}
+h1 {
+    color: #2F39A4;
+    margin-bottom: 0;
+    font-size: 1.9em;
+    grid-row: 1 / 1;
+    grid-column: 1 / 10;
+}
+h2 {
+    color: #1B248E;
+    font-size: 1.5em;
+}
+article {
+    padding: 20px;
+}
+img {
+    width: 100%;
+}
+video {
+    width: 100%;
 }
 /* Navigation */
 nav {
     background-color: #868686;
     display: grid;
-    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1% / 1fr 1fr 1fr 1fr;
 }
 nav a {
     width: 100%;
@@ -23,30 +44,24 @@ nav a:hover, nav a:active {
 i {
     -webkit-text-stroke: 0.4px;
 }
-/* Article */
-article {
-    padding: 20px;
-}
-/* Über mich */
+/* Uebermich */
 .uebermich {
     display: grid;
-    grid-template: 1% 1fr / 1fr 15px 1fr;
+    grid-template: 1% 1% / 1fr;
 }
-.uebermich .columnleft {
-    grid-row: 2 / 2;
-    grid-column: 1 / 1;
-}
-.uebermich .columnright {
-    grid-row: 2 / 2;
-    grid-column: 3 / 3;
+.columncontainer {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
 }
 .portrait {
-    width: 100%; 
+    width: 48%;
+    float: right;
+    margin: 2%;
 }
 /* Fähigkeiten */
 .faehigkeiten {
     display: grid;
-    grid-template: 1% 1% 1fr/ 1fr;
+    grid-template: 1% 1% 1%/ 1fr;
 }
 .faehigkeiten .intro {
     grid-row: 2 / 3;
@@ -55,11 +70,12 @@ article {
 .faehigkeiten .list {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
+    padding-left: 5%;
 }
 /* Portfolio */
 .portfolio {
     display: grid;
-    grid-template: 1% 1% 1% 1fr / 1fr 10px 1fr 10px 1fr;
+    grid-template: 1% 1% 1% 1% 1% 1% / 1fr 10px 1fr 10px 1fr;
 }
 .portfolio .intro {
     grid-row: 2 / 3;
@@ -81,10 +97,18 @@ article {
     grid-row: 4 / 5;
     grid-column: 5 / 6;
 }
+.videos {
+    grid-row: 5 / 6;
+    grid-column: 1 / 6;
+}
+.videocontainer {
+    grid-row: 6 / 7;
+    grid-column: 1 / 6;
+}
 /* Kontakt */
 .kontakt {
     display: grid;
-    grid-template: 1% 1% 1fr 1% 1% / 1fr;
+    grid-template: 1% 1% 1fr 1% 1% 1% / 1fr;
 }
 .kontaktformular {
     grid-row: 2 / 3;
@@ -103,17 +127,11 @@ input, textarea {
     display: block;
     margin-bottom: 8px;
 }
-h1 {
-    color: #2F39A4;
-    margin-bottom: 0;
-    font-size: 1.9em;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
+.email {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
 }
-h2 {
-    color: #1B248E;
-    font-size: 1.5em;
-}
+
 @media screen and (max-width: 420px)  {
     .portfolio {
         display: grid;
@@ -132,9 +150,32 @@ h2 {
         grid-column: 1 / 6;
     }
 }
-@media screen and (max-width: 490px)  {
+@media screen and (max-width: 450px)  {
     .nav-text {
         display: none;
     }
+    nav.uebermich-nav {
+        grid-template: 1fr / 4fr 1fr 1fr 1fr;
+    }
+    nav.faehigkeiten-nav {
+        grid-template: 1fr / 1fr 4fr 1fr 1fr;
+    }
+    nav.portfolio-nav {
+        grid-template: 1fr / 1fr 1fr 4fr 1fr;
+    }
+    nav.kontakt-nav {
+        grid-template: 1fr / 1fr 1fr 1fr 4fr;
+    }
 }
-
+@media screen and (max-width: 500px) {
+    .portrait {
+        width: 100%;
+        margin: 2% 0;
+    }
+}
+@media screen and (min-width: 1000px) {
+    article {
+        width: 960px;
+        margin: auto;
+    }
+}
