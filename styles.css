@@ -23,6 +23,10 @@ img {
 video {
     width: 100%;
 }
+.intro {
+    grid-row: 2 / 3;
+    grid-column: 1 / 10;
+}
 /* Navigation */
 nav {
     background-color: #868686;
@@ -63,10 +67,6 @@ i {
     display: grid;
     grid-template: 1% 1% 1%/ 1fr;
 }
-.faehigkeiten .intro {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-}
 .faehigkeiten .list {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
@@ -76,10 +76,6 @@ i {
 .portfolio {
     display: grid;
     grid-template: 1% 1% 1% 1% 1% 1% / 1fr 10px 1fr 10px 1fr;
-}
-.portfolio .intro {
-    grid-row: 2 / 3;
-    grid-column: 1 / 6;
 }
 .projekte {
     grid-row: 3 / 4;
@@ -132,10 +128,10 @@ input, textarea {
     grid-column: 1 / 2;
 }
 
-@media screen and (max-width: 420px)  {
+@media screen and (max-width: 580px)  {
     .portfolio {
         display: grid;
-        grid-template: 1% 1% 1% 1fr 1fr 1fr / 1fr 10px 1fr 10px 1fr;
+        grid-template: 1% 1% 1% 1% 1% 1% 1% 1% / 1fr 10px 1fr 10px 1fr;
     }
     .portfolio .columnleft {
         grid-row: 4 / 5;
@@ -148,6 +144,20 @@ input, textarea {
     .portfolio .columnright {
         grid-row: 6 / 7;
         grid-column: 1 / 6;
+    }
+    .videos {
+        grid-row: 7 / 8;
+        grid-column: 1 / 6;
+    }
+    .videocontainer {
+        grid-row: 7 / 8;
+        grid-column: 1 / 6;
+    }
+}
+@media screen and (max-width: 500px) {
+    .portrait {
+        width: 100%;
+        margin: 2% 0;
     }
 }
 @media screen and (max-width: 450px)  {
@@ -165,12 +175,6 @@ input, textarea {
     }
     nav.kontakt-nav {
         grid-template: 1fr / 1fr 1fr 1fr 4fr;
-    }
-}
-@media screen and (max-width: 500px) {
-    .portrait {
-        width: 100%;
-        margin: 2% 0;
     }
 }
 @media screen and (min-width: 1000px) {
