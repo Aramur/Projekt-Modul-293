@@ -31,7 +31,7 @@ video {
 nav {
     background-color: #868686;
     display: grid;
-    grid-template: 1% / 1fr 1fr 1fr 1fr;
+    grid-template: auto / 1fr 1fr 1fr 1fr;
 }
 nav a {
     width: 100%;
@@ -51,7 +51,7 @@ i {
 /* Uebermich */
 .uebermich {
     display: grid;
-    grid-template: 1% 1% / 1fr;
+    grid-template: auto auto / 1fr;
 }
 .columncontainer {
     grid-row: 2 / 3;
@@ -65,7 +65,7 @@ i {
 /* Fähigkeiten */
 .faehigkeiten {
     display: grid;
-    grid-template: 1% 1% 1%/ 1fr;
+    grid-template: auto auto auto / 1fr;
 }
 .faehigkeiten .list {
     grid-row: 3 / 4;
@@ -75,7 +75,7 @@ i {
 /* Portfolio */
 .portfolio {
     display: grid;
-    grid-template: 1% 1% 1% 1% 1% 1% / 1fr 10px 1fr 10px 1fr;
+    grid-template: auto auto auto auto auto auto / 1fr 10px 1fr 10px 1fr;
 }
 .projekte {
     grid-row: 3 / 4;
@@ -104,7 +104,7 @@ i {
 /* Kontakt */
 .kontakt {
     display: grid;
-    grid-template: 1% 1% 1fr 1% 1% 1% / 1fr;
+    grid-template: auto auto auto auto auto auto / 1fr;
 }
 .kontaktformular {
     grid-row: 2 / 3;
@@ -131,7 +131,7 @@ input, textarea {
 @media screen and (max-width: 580px)  {
     .portfolio {
         display: grid;
-        grid-template: 1% 1% 1% 1% 1% 1% 1% 1% / 1fr 10px 1fr 10px 1fr;
+        grid-template: auto auto auto auto auto auto auto auto / 1fr 10px 1fr 10px 1fr;
     }
     .portfolio .columnleft {
         grid-row: 4 / 5;
@@ -150,7 +150,7 @@ input, textarea {
         grid-column: 1 / 6;
     }
     .videocontainer {
-        grid-row: 7 / 8;
+        grid-row: 8 / 9;
         grid-column: 1 / 6;
     }
 }
